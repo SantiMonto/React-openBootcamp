@@ -1,16 +1,15 @@
 import './App.css';
-import Info from './components/Info';
-// import ComponenteB from "./components/ComponenteB"
-// import { Contacto } from './components/Contacto.class';
+// import Info from './components/Info';
+import ContactList from './components/ContactList';
 
 function App() {
-
-  // const contacto = new Contacto("Santiago","Montoya","smonto@prueba.com",false);
+  const addContact = () =>{
+  }
 
   return (
     <div className="App">
-      {/* <ComponenteB contacto={contacto}/> */}
-      <Info />
+      <ContactList add={addContact} />
+      {/* <Info /> */}
     </div>
   );
 }

@@ -2,19 +2,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Contacto } from "./Contacto.class";
 
-const ComponenteB = ({ contacto }) => {
+const ComponenteB = ({ contacto, key, remove, modify }) => {
+
+  const modifyOneStatus = ()=>{
+    if(contacto.conectado){
+        return (<i onClick={() => modify(contacto)} className='bi-toggle-on contact-action' style={{color: 'green'}}></i>)
+    }else{
+        return (<i onClick={() => modify(contacto)} className='bi-toggle-off contact-action' style={{color: 'grey'}}></i>)
+    }
+}
+
   return (
-    <div>
-      <h1>Este es un contacto</h1>
-      <h3>Nombre: {contacto.nombre}</h3>
-      <h3>Apellido: {contacto.apellido}</h3>
-      <h3>Email: {contacto.email}</h3>
-      <h3>{contacto.conectado ? "Contacto En Línea" : "Contacto No Disponible"}</h3>
-    </div>
+    <>
+      <tbody key={key}>
+        <td>{contacto.nombre}</td>
+        <td>{contacto.apellido}</td>
+        <td>{contacto.email}</td>
+        <td>{contacto.conectado ? "Conectado" : "Desconectado"}</td>
+        <td>
+          {modifyOneStatus()}
+          <i className="bi bi-trash"style={{color: 'tomato'}} onClick={() => remove(contacto)}></i>
+        </td>
+      </tbody>
+    </>
   );
 };
 
 ComponenteB.propTypes = {
-  contacto: PropTypes.objectOf(Contacto)
+  contacto: PropTypes.objectOf(Contacto),
 };
 export default ComponenteB;
