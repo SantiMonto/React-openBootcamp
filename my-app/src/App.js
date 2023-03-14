@@ -1,6 +1,7 @@
 import './App.css';
 // import Info from './components/Info';
 import ContactList from './components/ContactList';
+import RenderizadoCond from './components/RenderizadoCond';
 
 function App() {
   const addContact = () =>{
@@ -8,8 +9,9 @@ function App() {
 
   return (
     <div className="App">
-      <ContactList add={addContact} />
+      {/* <ContactList add={addContact} /> */}
       {/* <Info /> */}
+      <RenderizadoCond />
     </div>
   );
 }
