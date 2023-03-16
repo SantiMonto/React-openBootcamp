@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Contacto } from "../Contacto.class";
+import { Contacto } from "../../models/Contacto.class";
 import PropTypes from "prop-types";
 import "../../css/ContactForm.css"
 

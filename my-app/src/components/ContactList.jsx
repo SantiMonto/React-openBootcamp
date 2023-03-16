@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Contacto } from "./Contacto.class";
+import { Contacto } from "../models/Contacto.class";
 import "../css/ComponenteB.css";
 import ComponenteB from "./ComponenteB";
 import ContactForm from "./forms/ContactForm";
