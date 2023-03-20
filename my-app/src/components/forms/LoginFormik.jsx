@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -75,6 +75,9 @@ const Loginformik = () => {
           </Form>
         )}
       </Formik>
+      <Link to="/register">Register</Link>
+      <br />
+      <Link to="/">Home</Link>
     </div>
   );
 };

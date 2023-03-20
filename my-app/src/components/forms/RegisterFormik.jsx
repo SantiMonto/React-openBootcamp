@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Link } from "react-router-dom";
 
 // Models
 import { User } from "../../models/User.class";
@@ -118,6 +119,9 @@ const Registerformik = () => {
           </Form>
         )}
       </Formik>
+      <Link to="/login">Login</Link>
+      <br />
+      <Link to="/">Home</Link>
     </div>
   );
 };
