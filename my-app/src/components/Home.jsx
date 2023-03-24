@@ -10,7 +10,8 @@ const Home = ({ loggedIn }) => {
       <Link to="/register">Register</Link>
       <br />
       <Link to={loggedIn ? "/contacts" : "/"}>Contacts</Link>
-      {}
+      <br />
+      <Link to="/request">Axios Request</Link>
     </div>
   );
 };

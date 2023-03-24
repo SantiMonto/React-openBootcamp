@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import AxiosExample from "./components/AxiosExample";
 import ContactList from "./components/ContactList";
 import Loginformik from "./components/forms/LoginFormik";
 import Registerformik from "./components/forms/RegisterFormik";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Loginformik />} />
           <Route path="/register" element={<Registerformik />} />
           {loggedIn && <Route path="/contacts" element={<ContactList />} />}
+          <Route path="/request" element={<AxiosExample />} />
         </Routes>
       </Router>
     </div>
